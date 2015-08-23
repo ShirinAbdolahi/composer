@@ -72,6 +72,21 @@ To install the defined dependencies for your project, just run the
 ```sh
 php composer.phar install
 ```
+It is good to know that there are two ways to install (and use) Composer: locally and globally.
+
+Installing Composer locally simply means that you are downloading a file (composer.phar - which is a PHP Archive) into your project folder. You will have to download it for every project that needs Composer.
+
+Since this is a PHP file, you have to execute PHP to run it
+
+```sh
+php composer.phar install
+```
+Which basically tells php to run the file composer.phar with update as argument.
+
+However, if you install it globally, you can make composer itself executable, so you can call it without php (and don't have to download it for every project):
+```sh
+composer install
+```
 
 This will find the latest version of `monolog/monolog` that matches the
 supplied version constraint and download it into the `vendor` directory.
